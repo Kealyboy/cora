@@ -2,7 +2,7 @@ import config
 import local_ai
 
 
-def route(user_input: str, usage_count: int) -> None:
+def route(user_input: str, usage_count: int) -> str:
     # Normalize text once so keyword checks are case-insensitive.
     normalized_input = user_input.lower()
 
@@ -16,21 +16,18 @@ def route(user_input: str, usage_count: int) -> None:
         "set temperature",
     ]
     if any(keyword in normalized_input for keyword in home_assistant_keywords):
-        print("Route: Home Assistant layer")
-        return
+        return "Route: Home Assistant layer"
 
     # 2) Second priority: free tier always uses local AI.
     if config.USER_TIER == "free":
-        print(local_ai.respond(user_input))
-        return
+        return local_ai.respond(user_input)
 
     # 3) Third priority: plus tier over monthly cloud limit uses local AI.
     if (
         config.USER_TIER == "plus"
         and usage_count > config.PLUS_TIER_MONTHLY_CLOUD_AI_REQUEST_LIMIT
     ):
-        print(local_ai.respond(user_input))
-        return
+        return local_ai.respond(user_input)
 
     # 4) Otherwise, default to cloud AI.
-    print("Route: Cloud AI layer")
+    return "Route: Cloud AI layer"
