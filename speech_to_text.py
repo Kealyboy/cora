@@ -22,7 +22,7 @@ _model: WhisperModel | None = None
 def _get_model() -> WhisperModel:
     global _model
     if _model is None:
-        _model = WhisperModel("base", device="cpu", compute_type="int8")
+        _model = WhisperModel("small", device="cpu", compute_type="int8")
     return _model
 
 
@@ -87,7 +87,7 @@ def listen() -> str:
     audio = np.concatenate(buffer, axis=0)
     segments, _info = _get_model().transcribe(
         audio,
-        language=None,
+        language="en",
         vad_filter=True,
     )
     parts: list[str] = []
