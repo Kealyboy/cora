@@ -1,0 +1,74 @@
+2026-04-17 23:46:48,565 [WARNING] Tried to import the tflite runtime, but it was not found. Trying to switching to onnxruntime instead, if appropriate models are available.
+2026-04-17 23:47:01,846 [DEBUG] connect_tcp.started host='huggingface.co' port=443 local_address=None timeout=None socket_options=None
+2026-04-17 23:47:01,905 [DEBUG] connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000028DC5868C20>
+2026-04-17 23:47:01,906 [DEBUG] start_tls.started ssl_context=<ssl.SSLContext object at 0x0000028DC5996060> server_hostname='huggingface.co' timeout=None
+2026-04-17 23:47:01,940 [DEBUG] start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000028DC57F8050>
+2026-04-17 23:47:01,941 [DEBUG] send_request_headers.started request=<Request [b'GET']>
+2026-04-17 23:47:01,942 [DEBUG] send_request_headers.complete
+2026-04-17 23:47:01,942 [DEBUG] send_request_body.started request=<Request [b'GET']>
+2026-04-17 23:47:01,942 [DEBUG] send_request_body.complete
+2026-04-17 23:47:01,942 [DEBUG] receive_response_headers.started request=<Request [b'GET']>
+2026-04-17 23:47:02,002 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Date', b'Sat, 18 Apr 2026 03:47:01 GMT'), (b'content-encoding', b'gzip'), (b'ETag', b'W/"936-HI24CU+VNQGrZOWG1Gu7YsrtvyA"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-69e2feb5-1fc05658212f92790420ec5f;97af1ac8-89aa-4006-a364-ebca73cde19b'), (b'RateLimit', b'"api";r=499;t=139'), (b'RateLimit-Policy', b'"fixed window";"api";q=500;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'vary', b'Accept-Encoding'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 eb382ff675fc4a4551773e2e1657c302.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'ORD58-P13'), (b'X-Amz-Cf-Id', b'Vex3FXXksovFAM9uLEYLpvzhH1oX7444fQ6jFDPlEyQOniiltmjeoA==')])
+2026-04-17 23:47:02,004 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-medium/revision/main "HTTP/1.1 200 OK"
+2026-04-17 23:47:02,004 [DEBUG] receive_response_body.started request=<Request [b'GET']>
+2026-04-17 23:47:02,005 [DEBUG] receive_response_body.complete
+2026-04-17 23:47:02,005 [DEBUG] response_closed.started
+2026-04-17 23:47:02,005 [DEBUG] response_closed.complete
+2026-04-17 23:47:11,037 [INFO] Processing audio with duration 00:01.350
+2026-04-17 23:47:11,058 [INFO] VAD filter removed 00:00.000 of audio
+2026-04-17 23:47:11,059 [DEBUG] VAD filter kept the following audio segments: [00:00.000 -> 00:01.350]
+2026-04-17 23:47:11,066 [DEBUG] Processing segment at 00:00.000
+2026-04-17 23:47:30,041 [DEBUG] connect_tcp.started host='127.0.0.1' port=11434 local_address=None timeout=None socket_options=None
+2026-04-17 23:47:30,042 [DEBUG] connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000028DC57F8B90>
+2026-04-17 23:47:30,043 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2026-04-17 23:47:30,044 [DEBUG] send_request_headers.complete
+2026-04-17 23:47:30,044 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2026-04-17 23:47:30,045 [DEBUG] send_request_body.complete
+2026-04-17 23:47:30,046 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2026-04-17 23:47:45,759 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Sat, 18 Apr 2026 03:47:45 GMT'), (b'Content-Length', b'429')])
+2026-04-17 23:47:45,760 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-04-17 23:47:45,761 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2026-04-17 23:47:45,761 [DEBUG] receive_response_body.complete
+2026-04-17 23:47:45,761 [DEBUG] response_closed.started
+2026-04-17 23:47:45,761 [DEBUG] response_closed.complete
+2026-04-17 23:47:45,765 [WARNING] Tried to import the tflite runtime, but it was not found. Trying to switching to onnxruntime instead, if appropriate models are available.
+2026-04-17 23:48:02,976 [WARNING] Tried to import the tflite runtime, but it was not found. Trying to switching to onnxruntime instead, if appropriate models are available.
+2026-04-17 23:49:49,354 [WARNING] Tried to import the tflite runtime, but it was not found. Trying to switching to onnxruntime instead, if appropriate models are available.
+2026-04-17 23:50:04,851 [DEBUG] connect_tcp.started host='huggingface.co' port=443 local_address=None timeout=None socket_options=None
+2026-04-17 23:50:04,912 [DEBUG] connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000203E7F40C20>
+2026-04-17 23:50:04,913 [DEBUG] start_tls.started ssl_context=<ssl.SSLContext object at 0x00000203E5366060> server_hostname='huggingface.co' timeout=None
+2026-04-17 23:50:04,941 [DEBUG] start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000203E7ED4050>
+2026-04-17 23:50:04,941 [DEBUG] send_request_headers.started request=<Request [b'GET']>
+2026-04-17 23:50:04,942 [DEBUG] send_request_headers.complete
+2026-04-17 23:50:04,943 [DEBUG] send_request_body.started request=<Request [b'GET']>
+2026-04-17 23:50:04,943 [DEBUG] send_request_body.complete
+2026-04-17 23:50:04,943 [DEBUG] receive_response_headers.started request=<Request [b'GET']>
+2026-04-17 23:50:04,989 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Date', b'Sat, 18 Apr 2026 03:50:04 GMT'), (b'content-encoding', b'gzip'), (b'ETag', b'W/"936-HI24CU+VNQGrZOWG1Gu7YsrtvyA"'), (b'X-Powered-By', b'huggingface-moon'), (b'X-Request-Id', b'Root=1-69e2ff6c-54877fc042f56d91434f8e75;76b9b825-aef3-45ef-908d-5bf2fc4c6bc3'), (b'RateLimit', b'"api";r=499;t=256'), (b'RateLimit-Policy', b'"fixed window";"api";q=500;w=300'), (b'cross-origin-opener-policy', b'same-origin'), (b'Referrer-Policy', b'strict-origin-when-cross-origin'), (b'Access-Control-Max-Age', b'86400'), (b'Access-Control-Allow-Origin', b'https://huggingface.co'), (b'Vary', b'Origin'), (b'vary', b'Accept-Encoding'), (b'Access-Control-Expose-Headers', b'X-Repo-Commit,X-Request-Id,X-Error-Code,X-Error-Message,X-Total-Count,ETag,Link,Accept-Ranges,Content-Range,X-Linked-Size,X-Linked-ETag,X-Xet-Hash'), (b'X-Cache', b'Miss from cloudfront'), (b'Via', b'1.1 55e94b07b6102f9f50d16b922c8d10ca.cloudfront.net (CloudFront)'), (b'X-Amz-Cf-Pop', b'CMH68-P4'), (b'X-Amz-Cf-Id', b'qfA7kGlKrEsahkBRvl79N4Uh0Ca2a1RTswimHEr2pAFHbVR1-9Xhzg==')])
+2026-04-17 23:50:04,991 [INFO] HTTP Request: GET https://huggingface.co/api/models/Systran/faster-whisper-medium/revision/main "HTTP/1.1 200 OK"
+2026-04-17 23:50:04,992 [DEBUG] receive_response_body.started request=<Request [b'GET']>
+2026-04-17 23:50:04,992 [DEBUG] receive_response_body.complete
+2026-04-17 23:50:04,993 [DEBUG] response_closed.started
+2026-04-17 23:50:04,993 [DEBUG] response_closed.complete
+2026-04-17 23:50:15,049 [INFO] Processing audio with duration 00:01.350
+2026-04-17 23:50:15,070 [INFO] VAD filter removed 00:00.000 of audio
+2026-04-17 23:50:15,070 [DEBUG] VAD filter kept the following audio segments: [00:00.000 -> 00:01.350]
+2026-04-17 23:50:15,079 [DEBUG] Processing segment at 00:00.000
+2026-04-17 23:50:34,114 [DEBUG] connect_tcp.started host='127.0.0.1' port=11434 local_address=None timeout=None socket_options=None
+2026-04-17 23:50:34,118 [DEBUG] connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x00000203E7ED4B90>
+2026-04-17 23:50:34,130 [DEBUG] send_request_headers.started request=<Request [b'POST']>
+2026-04-17 23:50:34,133 [DEBUG] send_request_headers.complete
+2026-04-17 23:50:34,135 [DEBUG] send_request_body.started request=<Request [b'POST']>
+2026-04-17 23:50:34,135 [DEBUG] send_request_body.complete
+2026-04-17 23:50:34,137 [DEBUG] receive_response_headers.started request=<Request [b'POST']>
+2026-04-17 23:50:40,016 [DEBUG] receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Sat, 18 Apr 2026 03:50:40 GMT'), (b'Content-Length', b'456')])
+2026-04-17 23:50:40,017 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-04-17 23:50:40,017 [DEBUG] receive_response_body.started request=<Request [b'POST']>
+2026-04-17 23:50:40,017 [DEBUG] receive_response_body.complete
+2026-04-17 23:50:40,018 [DEBUG] response_closed.started
+2026-04-17 23:50:40,018 [DEBUG] response_closed.complete
+2026-04-17 23:50:40,021 [WARNING] Tried to import the tflite runtime, but it was not found. Trying to switching to onnxruntime instead, if appropriate models are available.
+2026-04-17 23:50:59,514 [WARNING] Tried to import the tflite runtime, but it was not found. Trying to switching to onnxruntime instead, if appropriate models are available.
+2026-04-17 23:58:46,064 [INFO] Processing audio with duration 00:00.720
+2026-04-17 23:58:46,070 [INFO] VAD filter removed 00:00.000 of audio
+2026-04-17 23:58:46,071 [DEBUG] VAD filter kept the following audio segments: [00:00.000 -> 00:00.720]
+2026-04-17 23:58:46,078 [DEBUG] Processing segment at 00:00.000

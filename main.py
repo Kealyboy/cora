@@ -1,8 +1,10 @@
 """CORA voice loop: listen, route, speak."""
 
 from __future__ import annotations
+from logger import log_error
 
 import router
+import chimes
 import speech_to_text
 import text_to_speech
 import wake_word
@@ -112,6 +114,7 @@ def main() -> None:
             if not skip_wake:
                 if wake_word.listen_for_wake_word():
                     print("CORA activated")
+                    chimes.wake_chime()
             else:
                 skip_wake = False
                 print("CORA activated")
@@ -128,6 +131,7 @@ def main() -> None:
             pending_input = None
 
         print(f"You said: {user_input}")
+        chimes.thinking_tone()
         if _wants_exit_session(user_input):
             completed = _speak(state, "Goodbye")
             print("Goodbye")
@@ -137,7 +141,13 @@ def main() -> None:
             continue
 
         usage_count += 1
-        response = router.route(user_input, usage_count)
+
+        try:
+            response = router.route(user_input, usage_count)
+        except Exception as e:
+            chimes.error_tone()
+            log_error(str(e))
+            response = "I'm sorry, I had an error. Please try again."
         print(response)
         completed = _speak(state, response)
         if not completed:

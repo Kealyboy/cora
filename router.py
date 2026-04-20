@@ -1,5 +1,6 @@
 import config
 import local_ai
+import ha_client
 
 
 def route(user_input: str, usage_count: int) -> str:
@@ -16,7 +17,10 @@ def route(user_input: str, usage_count: int) -> str:
         "set temperature",
     ]
     if any(keyword in normalized_input for keyword in home_assistant_keywords):
-        return "Route: Home Assistant layer"
+        action = local_ai.respond(user_input)
+        if action.startswith("ACTION:"):
+            return ha_client.execute(action)
+    return action
 
     # 2) Second priority: free tier always uses local AI.
     if config.USER_TIER == "free":
